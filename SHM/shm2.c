@@ -29,7 +29,8 @@ int main(int argc, char **argv)
   for(s = shm; *s != 0; s++) 
     printf("%c",*s); 
   printf("\n");
-  *shm = '*'; 
-  
+  *shm = '*';
+  printf("Dettaching SHM\n"); 
+  shmdt(shm);
   return 0;
 }

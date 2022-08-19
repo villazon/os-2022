@@ -36,5 +36,8 @@ int main(int argc, char **argv)
     printf("Waiting for '*' to be written in SHM\n");
     sleep(2);
   }
+
+  printf("Dettaching SHM\n");
+  shmdt(shm); 
   return 0;
 }
